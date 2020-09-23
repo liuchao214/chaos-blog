@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: Chaos Blog
+subtitle: '刘超的博客'
+description: '个人的成长经历'
+keywords: 前端成长笔记
+author: Chaos L
+language: zh-cn
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: https://liuchao214.github.io/chaos
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -103,4 +103,5 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repository: git@github.com:liuchao214/chaos-blog.git
