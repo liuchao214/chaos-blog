@@ -104,5 +104,4 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:liuchao214/chaos-blog.git
-  branch: release
+  repo: https://github.com/liuchao214/chaos.github.io
