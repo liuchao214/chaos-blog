@@ -105,4 +105,4 @@ theme: landscape
 deploy:
   type: git
   repository: git@github.com:liuchao214/chaos-blog.git
-  branch: master
+  branch: release
