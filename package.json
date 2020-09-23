@@ -11,6 +11,10 @@
   "hexo": {
     "version": "5.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuchao214/chaos-blog.git"
+  },
   "dependencies": {
     "hexo": "^5.0.0",
     "hexo-deployer-git": "^2.1.0",
@@ -20,7 +24,10 @@
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^3.0.0",
+    "hexo-renderer-pug": "^1.0.0",
+    "hexo-renderer-sass": "^0.4.0",
     "hexo-renderer-stylus": "^2.0.0",
-    "hexo-server": "^2.0.0"
+    "hexo-server": "^2.0.0",
+    "hexo-theme-fluid": "^1.8.3"
   }
 }
