@@ -6,9 +6,7 @@ tags: [Vue]
 categories: [Vue]
 ---
 # Vue基础学习笔记
-<!-- more -->
 ## 插值表达式
-<!-- more -->
 ```html
 <template>
     <div>

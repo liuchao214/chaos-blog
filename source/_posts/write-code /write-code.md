@@ -2,12 +2,11 @@
 title: 实现new、bind、instanceOf、deepClone
 date: 2017-08-21 16:23:53
 index_img: /images/code.png
-banner_img: /images/code.jpeg
+banner_img: /images/code-bg.jpg
 tags: [手撕代码,JavaScript]
 categories: [手撕代码]
 ---
 ### new 操作符
-<!-- more -->
 ```js
 var New = function(Fn) {
   var obj = {}; // 创建空对象
@@ -20,7 +19,6 @@ var New = function(Fn) {
 ```
 
 ### 深拷贝
-<!-- more -->
 ```js
 const getType = data => {
   // 获取数据类型
@@ -70,7 +68,6 @@ const deepClone = data => {
 ```
 
 ### bind
-<!-- more -->
 ```js
 Function.prototype.bind2 = function(context) {
   if (typeof this !== "function") {

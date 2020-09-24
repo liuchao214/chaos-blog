@@ -7,7 +7,6 @@ categories: [Vue]
 ---
 ### Object.defineProperty(obj, prop, desc)
 **核心的API**
-<!-- more -->
 ### 监听对象（简单）
 ```js
 const data = {}

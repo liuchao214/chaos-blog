@@ -11,7 +11,6 @@ categories: [Vue]
 2. 触发响应式，监听data属性，getter setter
 3. 执行render函数，生成vnode，patch（elem,vnode）
 
-<!-- more -->
 ## 更新过程
 
 1. 修改data，触发setter（此前在getter中已经被监听）

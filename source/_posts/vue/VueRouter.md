@@ -8,7 +8,6 @@ categories: [Vue]
 ## 路由模式
 - hash
 - history
-<!-- more -->
 
 ### hash
 带＃
@@ -46,7 +45,7 @@ export default new VueRouter({
  name: 'Tucao',
  component: () => import(/* webpackChunkName: "tucao" */ './../components/Tucao')
  }
- ]
+ ]})
 ```
 ## 路由守卫
 路由钩子函数有三种：
@@ -68,10 +67,10 @@ export default new VueRouter({
 
 ```js
 const router = new VueRouter({
-    。。。
-})
-router.beforeEach((to,from,next)=>{
     ...
+})
+router.beforeEach((to,from,next) => {
+    // do something....   
 })
 ```
 每个守卫方法接收三个参数：
@@ -91,10 +90,10 @@ router.beforeEach((to,from,next)=>{
 
 ```js
 const router = new VueRouter({
-    。。。
+    ...
 })
 router.afterEach((to,from)=>{
-    ...
+    // do something....   
 })
 ```
 和守卫不同的是，这些钩子不会接受 next 函数也不会改变导航本身
@@ -102,42 +101,36 @@ router.afterEach((to,from)=>{
 
 ```js
 export default new VueRouter({
- routes: [
- {
- path: '/',
- name: 'Navigator',
- router.beforeEnter((to,from,next)=>{
-    ...
- }),
- component: () => import(/* webpackChunkName: "navigator" */ './../components/Navigator')
- }
- ]
+    routes: [
+        {
+            path: '/',
+            name: 'Navigator',
+            beforeEnter:((to,from,next)=>{
+                // do something....   
+            }),
+            component: () => import(/* webpackChunkName: "navigator" */ './../components/Navigator')
+        }
+    ]
+})
 ```
 #### 组件级路由钩子
 
-```js
+```
 {
-
 data,
-
 methods
-
 beforeRouteEnter(){
-
    // this 不指向实例 组件还没创建
-
     next((vm) =>{
-
         // vm就是实例
-
     })
-
 }
-
-beforeRouteUpdate(){}
-
-beforeRouteLeave(){}
-
+beforeRouteUpdate(){
+// do something....   
+}
+beforeRouteLeave(){
+// do something....   
+} 
 }
 
 ```
