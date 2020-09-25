@@ -3,7 +3,7 @@ title: VueRouter
 date: 2018-6-01 21:30:12
 index_img: /images/Vue-cta.jpg
 tags: [Vue]
-categories: [Vue]
+categories: [框架、库学习]
 ---
 ## 路由模式
 - hash
@@ -135,16 +135,16 @@ beforeRouteLeave(){
 
 ```
 
-![image](luyou1.png)
+![image](/images/pages/luyou1.png)
 beforeRouteEnter 守卫 不能 访问 this，因为守卫在导航确认前被调用,因此即将登场的新组件还没被创建。不过，你可以通过传一个回调给 next来访问组件实例。在导航被确认的时候执行回调，并且把组件实例作为回调方法的参数。
 
-![image](luyou2.png)
+![image](/images/pages/luyou2.png)
 
 注意~ ： beforeRouteEnter 是支持给 next 传递回调的唯一守卫。对于 beforeRouteUpdate 和 beforeRouteLeave 来说，this 已经可用了，所以不支持传递回调，因为没有必要了。
 
 这个离开守卫beforeRouteLeave()通常用来禁止用户在还未保存修改前突然离开。该导航可以通过 next(false) 来取消。
 
-![image](luyou3.png)
+![image](/images/pages/luyou3.png)
 
 #### 完整的导航解析流程：
 

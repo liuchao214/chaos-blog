@@ -3,7 +3,7 @@ title: Vue的数据劫持
 date: 2018-02-16 23:50:02
 index_img: /images/Vue-cta.jpg
 tags: [Vue]
-categories: [Vue]
+categories: [框架、库学习]
 ---
 ### Object.defineProperty(obj, prop, desc)
 **核心的API**

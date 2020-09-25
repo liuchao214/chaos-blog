@@ -3,7 +3,7 @@ title: 实现new、bind、instanceOf、deepClone
 date: 2017-08-21 16:23:53
 index_img: /images/code.png
 banner_img: /images/code-bg.jpg
-tags: [手撕代码,JavaScript]
+tags: [JavaScript]
 categories: [手撕代码]
 ---
 ### new 操作符

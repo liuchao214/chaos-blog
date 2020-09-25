@@ -2,9 +2,9 @@
 title: 'RainbowSort [要求 Tc: O(n) Sc:O(1)]'
 date: 2017-011-09 19:09:45
 index_img: /images/algorithm.jpg
-banner_img: /images/algorithm-bg.jpg
-tags: [算法,JavaScript]
-categories: [算法]
+banner_img: /images/20191231163323.jpg
+tags: [算法, JavaScript]
+categories: [算法与逻辑]
 ---
 给定一系列球，其中球的颜色只能是红色，黄色或蓝色，对球进行排序，以使所有红色球都分组在左侧，所有黄色球都分组在中间，所有蓝色球分组在右侧。
 

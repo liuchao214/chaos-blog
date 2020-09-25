@@ -3,7 +3,7 @@ title: Vue组件渲染过程
 date: 2018-03-11 13:58:06
 index_img: /images/Vue-cta.jpg
 tags: [Vue]
-categories: [Vue]
+categories: [框架、库学习]
 ---
 ## 初次渲染过程
 

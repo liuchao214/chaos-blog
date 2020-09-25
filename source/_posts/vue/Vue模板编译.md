@@ -3,7 +3,7 @@ title: Vue模板编译
 date: 2018-02-28 13:57:05
 index_img: /images/Vue-cta.jpg
 tags: [Vue]
-categories: [Vue]
+categories: [框架、库学习]
 ---
 ### 模版编译
 

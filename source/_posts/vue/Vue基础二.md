@@ -3,7 +3,7 @@ title: Vue基础二
 date: 2018-01-22 12:24:20
 index_img: /images/Vue-cta.jpg
 tags: [Vue]
-categories: [Vue]
+categories: [框架、库学习]
 ---
 # Vue基础学习笔记
 ## 循环渲染

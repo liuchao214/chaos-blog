@@ -3,7 +3,7 @@ title: Vue基础一
 date: 2018-01-20 00:03:47
 index_img: /images/Vue-cta.jpg
 tags: [Vue]
-categories: [Vue]
+categories: [框架、库学习]
 ---
 # Vue基础学习笔记
 ## 插值表达式
