@@ -1,5 +1,5 @@
 ---
-title: 'twoSum [要求 Tc: O(n) Sc:O(n)]'
+title: twoSum
 date: 2017-05-07 14:04:21
 index_img: /images/algorithm.jpg
 banner_img: /images/20191231163323.jpg
@@ -7,6 +7,8 @@ tags: [算法, JavaScript]
 categories: [算法与逻辑]
 ---
 [LeetCode 第 1 题](https://leetcode-cn.com/problems/two-sum/)
+
+[要求 Tc: O(n) Sc:O(n)]
 
 按照题目要求, 我们第一时间想到的会是两层循环暴力解法：
 
@@ -25,7 +27,6 @@ function twoSum(nums, target) {
      }
      return [];
 }
-
 ```
 
 #### **解法2: Time = O(n), Space = O(n)**

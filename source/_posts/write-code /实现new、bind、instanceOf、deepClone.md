@@ -18,6 +18,44 @@ var New = function(Fn) {
 };
 ```
 
+### bind
+```js
+Function.prototype.bind2 = function(context) {
+  if (typeof this !== "function") {
+    throw new Error("...");
+  }
+  var that = this;
+  var args1 = Array.prototype.slice.call(arguments, 1);
+  var bindFn = function() {
+    var args2 = Array.prototype.slice.call(arguments);
+    var that2 = this instanceof bindFn ? this : context; // 如果当前函数的this指向的是构造函数中的this 则判定为new 操作。如果this是构造函数bindFn new出来的实例，那么此处的this一定是该实例本身。
+    return that.apply(that2, args1.concat(args2));
+  };
+  var Fn = function() {}; // 连接原型链用Fn
+  // 原型赋值
+  Fn.prototype = this.prototype; // bindFn的prototype指向和this的prototype一样，指向同一个原型对象
+  bindFn.prototype = new Fn();
+  return bindFn;
+};
+```
+
+
+### instanceOf
+```js
+const instanceOf = (left, right) => {
+  let proto = left.__proto__;
+  let prototype = right.prototype;
+  while (true) {
+    if (proto === null) {
+      return false;
+    } else if (proto === prototype) {
+      return true;
+    }
+    proto = proto.__proto__;
+  }
+};
+```
+
 ### 深拷贝
 ```js
 const getType = data => {
@@ -64,43 +102,5 @@ const deepClone = data => {
     return res;
   };
   return baseClone(data);
-};
-```
-
-### bind
-```js
-Function.prototype.bind2 = function(context) {
-  if (typeof this !== "function") {
-    throw new Error("...");
-  }
-  var that = this;
-  var args1 = Array.prototype.slice.call(arguments, 1);
-  var bindFn = function() {
-    var args2 = Array.prototype.slice.call(arguments);
-    var that2 = this instanceof bindFn ? this : context; // 如果当前函数的this指向的是构造函数中的this 则判定为new 操作。如果this是构造函数bindFn new出来的实例，那么此处的this一定是该实例本身。
-    return that.apply(that2, args1.concat(args2));
-  };
-  var Fn = function() {}; // 连接原型链用Fn
-  // 原型赋值
-  Fn.prototype = this.prototype; // bindFn的prototype指向和this的prototype一样，指向同一个原型对象
-  bindFn.prototype = new Fn();
-  return bindFn;
-};
-```
-
-### instanceOf
-
-```js
-const instanceOf = (left, right) => {
-  let proto = left.__proto__;
-  let prototype = right.prototype;
-  while (true) {
-    if (proto === null) {
-      return false;
-    } else if (proto === prototype) {
-      return true;
-    }
-    proto = proto.__proto__;
-  }
 };
 ```

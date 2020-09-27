@@ -1,13 +1,13 @@
 ---
-title: 'RainbowSort [要求 Tc: O(n) Sc:O(1)]'
-date: 2017-011-09 19:09:45
+title: RainbowSort
+date: 2017-11-09 19:09:45
 index_img: /images/algorithm.jpg
 banner_img: /images/20191231163323.jpg
 tags: [算法, JavaScript]
 categories: [算法与逻辑]
 ---
 给定一系列球，其中球的颜色只能是红色，黄色或蓝色，对球进行排序，以使所有红色球都分组在左侧，所有黄色球都分组在中间，所有蓝色球分组在右侧。
-
+[要求 Tc: O(n) Sc:O(1)]
 例：
 
 > [红] 被排序为 [红]
@@ -33,12 +33,13 @@ corner case:
 j 为快指针
 
 ```js
-const input = ['黄','红','红','蓝','黄','红','蓝']
+const input = ['黄', '红', '红', '蓝', '黄', '红', '蓝'];
+
 function rainbowSort(rainbow) {
     let i = 0, j = 0, k = rainbow.length - 1;
     while (j <= k) {
         if (rainbow[j] === '红') {
-            swap(rainbow,i,j);
+            swap(rainbow, i, j);
             i++;
             j++;
         }
@@ -51,11 +52,30 @@ function rainbowSort(rainbow) {
         }
     }
 }
-//辅助交换函数
-function swap(arr,i,j) {
-    [arr[i],arr[j]] = [arr[j],arr[i]]
-}
-rainbowSort(input);
-console.log(input);
 
+//辅助交换函数
+function swap(arr, i, j) {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+}
+
+rainbowSort(input);
+```
+
+利用sort：
+
+```js
+const input = ['黄', '红', '红', '蓝', '黄', '红', '蓝'];
+const enums = {
+    '红': 1,
+    '黄': 2,
+    '蓝': 3
+};
+
+function rainbowSort(rainbow) {
+    return rainbow.sort((a, b) => {
+        return enums[a] - enums[b];
+    });
+}
+
+rainbowSort(input);
 ```
